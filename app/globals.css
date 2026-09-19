@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --fita-bg: #0a0a0a;
+  --fita-panel: #0c0c0e;
+  --fita-border: #1e1e21;
+  --fita-text: #ececec;
+  --fita-muted: #7e7e84;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--fita-bg);
+  color: var(--fita-text);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background: #ececec;
+  color: #0a0a0a;
+}
+
+.fita-grid-line-r {
+  border-right: 1px solid var(--fita-border);
+}
+
+.fita-grid-line-b {
+  border-bottom: 1px solid var(--fita-border);
+}
+
+.headline-tight {
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .fita-grid-line-r,
+  .fita-grid-line-b {
+    border-color: #1e1e21;
+  }
+}

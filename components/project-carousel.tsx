@@ -1,0 +1,113 @@
+"use client";
+
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
+import { projects } from "@/lib/projects";
+
+export function ProjectCarousel() {
+  const [index, setIndex] = useState(0);
+  const project = projects[index];
+
+  const next = () => setIndex((current) => (current + 1) % projects.length);
+  const previous = () =>
+    setIndex((current) => (current - 1 + projects.length) % projects.length);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") next();
+      if (event.key === "ArrowLeft") previous();
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  return (
+    <div className="flex min-h-0 flex-1 flex-col justify-between">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
+            04 // Selected cuts
+          </span>
+          <span className="font-mono text-[10px] text-zinc-400">
+            {String(index + 1).padStart(2, "0")} /{" "}
+            {String(projects.length).padStart(2, "0")}
+          </span>
+        </div>
+
+        <div className="flex gap-2">
+          <button
+            onClick={previous}
+            aria-label="Previous project"
+            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-white hover:text-white"
+          >
+            ←
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next project"
+            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-white hover:text-white"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <div className="relative my-5 min-h-[220px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={project.title}
+            initial={{ opacity: 0, scale: 1.03 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className={`absolute inset-0 bg-gradient-to-br ${project.accent}`}
+          >
+            <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(120deg,transparent_0%,rgba(255,255,255,.12)_50%,transparent_100%)]" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid size-14 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur-sm">
+                ▶
+              </div>
+            </div>
+
+            <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400">
+                  {project.category}
+                </p>
+                <h3 className="mt-1 font-[family-name:var(--font-syne)] text-xl font-bold uppercase tracking-tight text-white">
+                  {project.title}
+                </h3>
+              </div>
+              <span className="hidden font-mono text-[10px] text-zinc-400 sm:block">
+                {project.format}
+              </span>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="flex items-center justify-between border-t border-zinc-900 pt-3">
+        <div className="no-scrollbar flex gap-4 overflow-x-auto">
+          {projects.map((item, itemIndex) => (
+            <button
+              key={item.title}
+              onClick={() => setIndex(itemIndex)}
+              className={`shrink-0 border-b pb-1 font-mono text-[10px] uppercase tracking-[0.12em] transition ${
+                itemIndex === index
+                  ? "border-white text-white"
+                  : "border-transparent text-zinc-600 hover:text-zinc-300"
+              }`}
+            >
+              {String(itemIndex + 1).padStart(2, "0")} {item.title}
+            </button>
+          ))}
+        </div>
+
+        <span className="hidden shrink-0 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500 sm:block">
+          Replace with real media
+        </span>
+      </div>
+    </div>
+  );
+}

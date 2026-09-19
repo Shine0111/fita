@@ -1,8 +1,8 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { projects } from "@/lib/projects";
+import { AnimatePresence, motion } from "framer-motion";
+import { projects } from "../lib/projects";
 
 export function ProjectCarousel() {
   const [index, setIndex] = useState(0);

@@ -1,7 +1,7 @@
-import { Details } from "@/components/details";
-import { Profile } from "@/components/profile";
-import { ProjectCarousel } from "@/components/project-carousel";
-import { Statement } from "@/components/statement";
+import { Details } from "../components/details";
+import { Profile } from "../components/profile";
+import { ProjectCarousel } from "../components/project-carousel";
+import { Statement } from "../components/statement";
 
 export default function Home() {
   return (
@@ -15,9 +15,15 @@ export default function Home() {
         </a>
 
         <nav className="flex items-center gap-6 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400 sm:gap-8">
-          <a href="#work" className="transition hover:text-white">Work</a>
-          <a href="#about" className="transition hover:text-white">About</a>
-          <a href="mailto:hello@fita.studio" className="transition hover:text-white">Contact</a>
+          <a href="work" className="transition hover:text-white">
+            Work
+          </a>
+          <a href="about" className="transition hover:text-white">
+            About
+          </a>
+          <a href="contact" className="transition hover:text-white">
+            Contact
+          </a>
         </nav>
       </header>
 

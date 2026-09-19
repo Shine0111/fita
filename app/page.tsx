@@ -5,11 +5,11 @@ import { Statement } from "../components/statement";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#0a0a0a] font-[family-name:var(--font-jakarta)] text-zinc-100 lg:h-screen lg:overflow-hidden">
+    <main className="min-h-screen overflow-x-hidden bg-[#0a0a0a] font-(family-name:--font-jakarta) text-zinc-100 lg:h-screen lg:overflow-hidden">
       <header className="flex h-14 items-center justify-between border-b border-[#1c1c1f] bg-[#0a0a0a] px-6 lg:px-10">
         <a
           href="#top"
-          className="font-[family-name:var(--font-syne)] text-xs font-extrabold uppercase tracking-[0.25em] text-white"
+          className="font-(family-name:--font-syne) text-xs font-extrabold uppercase tracking-[0.25em] text-white"
         >
           FITA
         </a>

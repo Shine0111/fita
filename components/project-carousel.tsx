@@ -53,7 +53,8 @@ export function ProjectCarousel() {
         </div>
       </div>
 
-      <div className="relative my-5 min-h-[220px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950">
+      <div className="relative my-5 min-h-[220px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:my-3 lg:min-h-[clamp(120px,20vh,220px)]">
+        {" "}
         <AnimatePresence mode="wait">
           <motion.div
             key={project.title}
@@ -63,6 +64,15 @@ export function ProjectCarousel() {
             transition={{ duration: 0.45, ease: "easeOut" }}
             className={`absolute inset-0 bg-gradient-to-br ${project.accent}`}
           >
+            {/* top-left tag + duration, add inside the motion.div, above the play button */}
+            <div className="absolute left-4 top-4 flex items-center gap-2">
+              <span className="bg-red-600 px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-wider text-white">
+                {project.tag}
+              </span>
+              <span className="font-mono text-[10px] text-zinc-300">
+                {project.duration}
+              </span>
+            </div>
             <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(120deg,transparent_0%,rgba(255,255,255,.12)_50%,transparent_100%)]" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="grid size-14 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur-sm">
@@ -81,6 +91,10 @@ export function ProjectCarousel() {
               </div>
               <span className="hidden font-mono text-[10px] text-zinc-400 sm:block">
                 {project.format}
+              </span>
+              {/* credit line, next to the format tag in the bottom overlay row */}
+              <span className="hidden font-mono text-[10px] text-zinc-400 sm:block">
+                {project.credit} ↗
               </span>
             </div>
           </motion.div>
@@ -104,8 +118,9 @@ export function ProjectCarousel() {
           ))}
         </div>
 
-        <span className="hidden shrink-0 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500 sm:block">
-          Replace with real media
+        <span className="hidden shrink-0 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500 sm:flex">
+          <span className="size-1.5 rounded-full bg-red-500" />
+          Watch 2024 showreel
         </span>
       </div>
     </div>

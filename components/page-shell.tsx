@@ -2,7 +2,6 @@ import { SiteHeader, type SiteHeaderCurrent } from "./site-header";
 
 type PageShellProps = {
   current: SiteHeaderCurrent;
-  /** true = page is allowed to grow/scroll (About). Default: locked to viewport on desktop. */
   scroll?: boolean;
   children: React.ReactNode;
 };
@@ -14,12 +13,20 @@ export function PageShell({
 }: PageShellProps) {
   return (
     <main
-      className={`min-h-screen bg-[#0a0a0a] font-[family-name:var(--font-jakarta)] text-zinc-100 ${
-        scroll ? "" : "lg:h-screen lg:overflow-hidden"
+      className={`flex flex-col bg-[#0a0a0a] font-(family-name:--font-jakarta) text-zinc-100 ${
+        scroll ? "min-h-screen" : "min-h-screen lg:h-screen"
       }`}
     >
-      <SiteHeader current={current} />
-      {children}
+      <div className="shrink-0">
+        <SiteHeader current={current} />
+      </div>
+      <div
+        className={`flex flex-1 flex-col ${
+          scroll ? "" : "min-h-0 lg:overflow-hidden"
+        }`}
+      >
+        {children}
+      </div>
     </main>
   );
 }

@@ -4,6 +4,8 @@ import { ProjectCarousel } from "../components/project-carousel";
 import { Statement } from "../components/statement";
 import { PageShell } from "../components/page-shell";
 import { SiteFooter } from "../components/site-footer";
+import { projects } from "../lib/projects";
+import { ProjectReel } from "../components/project-reel";
 
 export default function Home() {
   return (
@@ -28,7 +30,7 @@ export default function Home() {
           id="work"
           className="min-h-[50svh] border-t border-[#1e1e21] bg-[#0a0a0a] p-6 lg:px-8 lg:py-5 lg:min-h-0 lg:overflow-y-auto"
         >
-          <ProjectCarousel />
+          <ProjectCarousel projects={projects} />{" "}
         </section>
       </div>
       <SiteFooter />

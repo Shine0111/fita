@@ -1,29 +1,48 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { projects } from "../lib/projects";
+import type { Project } from "../lib/projects";
+import { AnimatePresence, motion } from "motion/react";
 
-export function ProjectCarousel() {
+type ProjectCarouselProps = {
+  projects: Project[];
+};
+
+export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setIndex(0);
+  }, [projects]);
+  if (projects.length === 0) {
+    return (
+      <div className="flex min-h-0 flex-1 items-center justify-center border border-zinc-800 text-sm text-zinc-500">
+        No projects in this collection.
+      </div>
+    );
+  }
+
   const project = projects[index];
 
   const next = () => setIndex((current) => (current + 1) % projects.length);
   const previous = () =>
     setIndex((current) => (current - 1 + projects.length) % projects.length);
 
-  useEffect(() => {
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowRight") next();
-      if (event.key === "ArrowLeft") previous();
-    };
-
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
-
   return (
-    <div className="flex min-h-0 flex-1 flex-col justify-between">
+    <div
+      className="flex min-h-0 flex-1 flex-col justify-between"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === "ArrowRight") {
+          next();
+        }
+
+        if (event.key === "ArrowLeft") {
+          previous();
+        }
+      }}
+      aria-label="Project carousel"
+    >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
@@ -58,11 +77,31 @@ export function ProjectCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={project.title}
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.15}
+            onDragEnd={(_, info) => {
+              const swipeDistance = 60;
+              const swipeVelocity = 500;
+
+              if (
+                info.offset.x < -swipeDistance ||
+                info.velocity.x < -swipeVelocity
+              ) {
+                next();
+              } else if (
+                info.offset.x > swipeDistance ||
+                info.velocity.x > swipeVelocity
+              ) {
+                previous();
+              }
+            }}
             initial={{ opacity: 0, scale: 1.03 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.45, ease: "easeOut" }}
-            className={`absolute inset-0 bg-gradient-to-br ${project.accent}`}
+            className={`absolute inset-0 touch-pan-y bg-gradient-to-br ${project.accent}`}
           >
             {/* top-left tag + duration, add inside the motion.div, above the play button */}
             <div className="absolute left-4 top-4 flex items-center gap-2">

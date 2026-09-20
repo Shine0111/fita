@@ -44,8 +44,8 @@ export function ProjectReel({ projects }: ProjectReelProps) {
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
-      <div className="mb-4">
+    <div className="grid min-h-0 min-w-0 flex-1 grid-rows-[auto_minmax(0,1fr)]">
+      <div className="mb-3 min-w-0">
         <FormatTabs
           collections={availableCollections}
           activeCollection={activeCollection}

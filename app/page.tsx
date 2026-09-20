@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <section
           id="work"
-          className="min-h-[50svh] border-t border-[#1e1e21] bg-[#0a0a0a] p-6 lg:px-8 lg:py-5 lg:min-h-0 lg:overflow-y-auto"
+          className="min-h-[50svh] min-w-0 overflow-hidden border-t border-[#1e1e21] bg-[#0a0a0a] p-6 lg:min-h-0 lg:px-8 lg:py-5"
         >
           <ProjectReel projects={projects} />
         </section>

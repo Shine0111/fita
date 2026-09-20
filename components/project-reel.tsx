@@ -52,8 +52,10 @@ export function ProjectReel({ projects }: ProjectReelProps) {
           onChange={setActiveCollection}
         />
       </div>
-
-      <ProjectCarousel projects={activeProjects} />
+      <ProjectCarousel
+        projects={activeProjects}
+        layout={activeCollection === "Reels" ? "reel" : "wide"}
+      />
     </div>
   );
 }

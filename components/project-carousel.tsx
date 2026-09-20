@@ -6,6 +6,7 @@ import type { Project } from "../lib/projects";
 
 type ProjectCarouselProps = {
   projects: Project[];
+  layout?: "wide" | "reel";
 };
 
 type ProjectCardProps = {
@@ -99,7 +100,10 @@ function ProjectCard({
   );
 }
 
-export function ProjectCarousel({ projects }: ProjectCarouselProps) {
+export function ProjectCarousel({
+  projects,
+  layout = "wide",
+}: ProjectCarouselProps) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -201,12 +205,19 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
         </div>
       </div>
 
-      <div className="relative isolate my-4 min-h-[170px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:my-3 lg:min-h-[180px]">
+      <div
+        className={`relative isolate my-4 min-h-[170px] overflow-hidden border border-zinc-800 bg-zinc-950 lg:my-3 lg:min-h-[180px] ${
+          layout === "reel"
+            ? "aspect-[9/10] w-full max-w-full self-center lg:h-full lg:w-auto lg:max-w-full"
+            : "flex-1"
+        }`}
+      >
+        {" "}
         {hasPreviews && (
           <ProjectCard
             project={previousProject}
             isPreview
-            className="left-[-60%] w-[78%] scale-[0.92] opacity-35"
+            className="left-[-60%] z-0 h-full w-[78%] scale-[0.92] opacity-35"
           />
         )}
         <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -230,11 +241,11 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
                 duration: 0.25,
               },
             }}
-            className="absolute inset-y-0 left-[11%] w-[78%] touch-pan-y"
+            className="absolute inset-y-0 left-[11%] z-10 h-full w-[78%] touch-pan-y"
           >
             <ProjectCard
               project={project}
-              className="inset-0 w-full"
+              className="inset-0 h-full w-full"
               onDragEnd={handleDragEnd}
             />
           </motion.div>
@@ -243,7 +254,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
           <ProjectCard
             project={nextProject}
             isPreview
-            className="right-[-60%] w-[78%] scale-[0.92] opacity-35"
+            className="right-[-60%] z-0 h-full w-[78%] scale-[0.92] opacity-35"
           />
         )}
       </div>

@@ -46,7 +46,7 @@ export default function ContactPage() {
 
             <a
               href="mailto:hello@fita.studio"
-              className="block break-all font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white underline decoration-1 underline-offset-8 transition hover:text-zinc-400 sm:text-4xl lg:text-[clamp(1.5rem,2.4vw+2vh,2.75rem)]"
+              className="block break-all font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-4xl lg:text-[clamp(1.5rem,2.4vw+2vh,2.75rem)]"
             >
               hello@fita.studio
             </a>
@@ -65,7 +65,7 @@ export default function ContactPage() {
               href="https://wa.me/10000000000"
               target="_blank"
               rel="noreferrer"
-              className="self-start border border-zinc-700 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-white transition hover:border-white sm:self-auto"
+              className="self-start border border-[var(--fita-accent)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--fita-accent)] transition hover:bg-[var(--fita-accent)] hover:text-black sm:self-auto"
             >
               Start chat →
             </a>

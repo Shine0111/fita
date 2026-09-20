@@ -22,7 +22,7 @@ export function SiteFooter() {
               href={social.href}
               target="_blank"
               rel="noreferrer"
-              className="transition hover:text-white"
+              className="transition hover:text-[var(--fita-accent)]"
             >
               {social.label}
             </a>

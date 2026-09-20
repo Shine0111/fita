@@ -12,7 +12,7 @@ export function SiteHeader({ current }: { current: SiteHeaderCurrent }) {
       <div className="flex items-center gap-3">
         <a
           href="/"
-          className="font-[family-name:var(--font-syne)] text-xs font-extrabold uppercase tracking-[0.25em] text-white"
+          className="font-[family-name:var(--font-syne)] text-xs font-extrabold uppercase tracking-[0.25em] text-white transition hover:text-[var(--fita-accent)]"
         >
           FITA
         </a>
@@ -31,8 +31,8 @@ export function SiteHeader({ current }: { current: SiteHeaderCurrent }) {
             href={item.href}
             className={
               current === item.key
-                ? "border-b border-white pb-0.5 text-white"
-                : "transition hover:text-white"
+                ? "border-b border-[var(--fita-accent)] pb-0.5 text-[var(--fita-accent)]"
+                : "transition hover:text-[var(--fita-accent)]"
             }
           >
             {item.label}

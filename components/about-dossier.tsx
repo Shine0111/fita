@@ -111,7 +111,7 @@ export function AboutDossier() {
           </p>
           <a
             href="mailto:hello@fita.studio"
-            className="border border-white px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-white transition hover:bg-white hover:text-black"
+            className="border border-[var(--fita-accent)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--fita-accent)] transition hover:bg-[var(--fita-accent)] hover:text-black"
           >
             Start project
           </a>

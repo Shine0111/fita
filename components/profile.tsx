@@ -37,16 +37,16 @@ export function Profile() {
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-3">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400">
-          <a href="#" className="transition hover:text-white">
+          <a href="#" className="transition hover:text-[var(--fita-accent)]">
             Instagram ↗
           </a>
-          <a href="#" className="transition hover:text-white">
+          <a href="#" className="transition hover:text-[var(--fita-accent)]">
             YouTube ↗
           </a>
-          <a href="#" className="transition hover:text-white">
+          <a href="#" className="transition hover:text-[var(--fita-accent)]">
             Vimeo ↗
           </a>
-          <a href="#" className="transition hover:text-white">
+          <a href="#" className="transition hover:text-[var(--fita-accent)]">
             LinkedIn ↗
           </a>
         </div>

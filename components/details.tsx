@@ -74,7 +74,7 @@ export function Details() {
 
         <a
           href="mailto:hello@fita.studio"
-          className="font-mono text-[10px] uppercase tracking-[0.1em] text-white underline underline-offset-4 transition hover:text-zinc-300"
+          className="font-mono text-[10px] uppercase tracking-[0.1em] text-white underline decoration-[var(--fita-accent)] underline-offset-4 transition hover:text-[var(--fita-accent)]"
         >
           Initiate collaboration →
         </a>

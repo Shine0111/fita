@@ -11,6 +11,7 @@ type ProjectCarouselProps = {
 
 type ProjectCardProps = {
   project: Project;
+  layout: "wide" | "reel";
   className?: string;
   isPreview?: boolean;
   onDragEnd?: (
@@ -39,10 +40,13 @@ const cardVariants = {
 
 function ProjectCard({
   project,
+  layout,
   className = "",
   isPreview = false,
   onDragEnd,
 }: ProjectCardProps) {
+  const isReel = layout === "reel";
+
   return (
     <motion.div
       drag={isPreview ? false : "x"}
@@ -53,12 +57,24 @@ function ProjectCard({
       aria-hidden={isPreview}
       className={`absolute inset-y-0 overflow-hidden bg-gradient-to-br ${project.accent} ${className}`}
     >
-      <div className="absolute left-4 top-4 flex items-center gap-2">
-        <span className="bg-red-600 px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-wider text-white">
+      <div
+        className={`absolute flex items-center ${
+          isReel ? "left-2 top-2 gap-1.5" : "left-4 top-4 gap-2"
+        }`}
+      >
+        <span
+          className={`bg-red-600 font-mono font-bold uppercase tracking-wider text-white ${
+            isReel ? "px-1.5 py-0.5 text-[7px]" : "px-2 py-1 text-[9px]"
+          }`}
+        >
           {project.tag}
         </span>
 
-        <span className="font-mono text-[10px] text-zinc-300">
+        <span
+          className={`font-mono text-zinc-300 ${
+            isReel ? "text-[8px]" : "text-[10px]"
+          }`}
+        >
           {project.duration}
         </span>
       </div>
@@ -67,24 +83,42 @@ function ProjectCard({
 
       {!isPreview && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="grid size-14 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur-sm">
+          <div
+            className={`grid place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur-sm ${
+              isReel ? "size-9 text-xs" : "size-14 text-base"
+            }`}
+          >
             ▶
           </div>
         </div>
       )}
 
-      <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+      <div
+        className={`absolute flex items-end justify-between ${
+          isReel ? "inset-x-2 bottom-2 gap-2" : "inset-x-4 bottom-4 gap-3"
+        }`}
+      >
         <div className="min-w-0">
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400">
+          <p
+            className={`uppercase tracking-[0.16em] text-zinc-400 ${
+              isReel
+                ? "font-mono text-[7px] tracking-[0.1em]"
+                : "font-mono text-[10px]"
+            }`}
+          >
             {project.category}
           </p>
 
-          <h3 className="mt-1 truncate font-[family-name:var(--font-syne)] text-xl font-bold uppercase tracking-tight text-white">
+          <h3
+            className={`mt-1 truncate font-[family-name:var(--font-syne)] font-bold uppercase tracking-tight text-white ${
+              isReel ? "text-sm leading-tight" : "text-xl"
+            }`}
+          >
             {project.title}
           </h3>
         </div>
 
-        {!isPreview && (
+        {!isPreview && !isReel && (
           <>
             <span className="hidden shrink-0 font-mono text-[10px] text-zinc-400 sm:block">
               {project.format}
@@ -205,12 +239,13 @@ export function ProjectCarousel({
         </div>
       </div>
 
-      <div className="relative isolate my-3 min-h-[160px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
+      <div className="relative isolate my-3 min-h-[clamp(280px,55svh,420px)] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
         {" "}
         {hasPreviews && (
           <ProjectCard
             project={previousProject}
             isPreview
+            layout={layout}
             className={`z-0 h-full scale-[0.92] opacity-35 ${
               layout === "reel"
                 ? "left-[34%] aspect-[9/16] w-auto"
@@ -247,6 +282,7 @@ export function ProjectCarousel({
           >
             <ProjectCard
               project={project}
+              layout={layout}
               className="inset-0 h-full w-full"
               onDragEnd={handleDragEnd}
             />
@@ -256,6 +292,7 @@ export function ProjectCarousel({
           <ProjectCard
             project={nextProject}
             isPreview
+            layout={layout}
             className={`z-0 h-full scale-[0.92] opacity-35 ${
               layout === "reel"
                 ? "right-[34%] aspect-[9/16] w-auto"

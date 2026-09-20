@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NAV_ITEMS = [
   { key: "work", href: "/work", label: "Work" },
   { key: "about", href: "/about", label: "About" },
@@ -26,7 +28,7 @@ export function SiteHeader({ current }: { current: SiteHeaderCurrent }) {
 
       <nav className="flex items-center gap-6 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400 sm:gap-8">
         {NAV_ITEMS.map((item) => (
-          <a
+          <Link
             key={item.key}
             href={item.href}
             className={
@@ -36,7 +38,7 @@ export function SiteHeader({ current }: { current: SiteHeaderCurrent }) {
             }
           >
             {item.label}
-          </a>
+          </Link>
         ))}
       </nav>
     </header>

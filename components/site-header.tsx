@@ -12,12 +12,12 @@ export function SiteHeader({ current }: { current: SiteHeaderCurrent }) {
   return (
     <header className="flex h-14 items-center justify-between border-b border-[#1c1c1f] bg-[#0a0a0a] px-6 lg:px-10">
       <div className="flex items-center gap-3">
-        <a
+        <Link
           href="/"
           className="font-[family-name:var(--font-syne)] text-xs font-extrabold uppercase tracking-[0.25em] text-white transition hover:text-[var(--fita-accent)]"
         >
           FITA
-        </a>
+        </Link>
         <span className="hidden items-center gap-2 border-l border-zinc-800 pl-3 sm:flex">
           <span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />
           <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">

@@ -4,14 +4,14 @@ import { SiteFooter } from "../../components/site-footer";
 export default function ContactPage() {
   return (
     <PageShell current="contact" footer={<SiteFooter />}>
-      <section className="grid flex-1 min-h-0 lg:grid-cols-2">
+      <section className="grid lg:flex-1 lg:min-h-0 lg:grid-cols-2">
         <div className="flex flex-col justify-between border-b border-[#1e1e21] p-6 lg:min-h-0 lg:overflow-y-auto lg:border-b-0 lg:border-r lg:px-8 lg:py-5">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
               01 // Contact
             </span>
             <div className="flex items-center gap-2">
-              <span className="size-1.5 animate-pulse rounded-full bg-red-500" />
+              <span className="size-1.5 shrink-0 animate-pulse rounded-full bg-red-500" />
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
                 Available for commissions
               </span>
@@ -19,7 +19,7 @@ export default function ContactPage() {
           </div>
 
           <div className="py-16 lg:py-4">
-            <h1 className="headline-tight max-w-3xl font-[family-name:var(--font-syne)] text-[clamp(3.5rem,7vw,7rem)] font-extrabold uppercase lg:text-[clamp(2rem,3.2vw+3vh,5rem)]">
+            <h1 className="headline-tight max-w-3xl font-[family-name:var(--font-syne)] text-[clamp(2.75rem,12vw,7rem)] font-extrabold uppercase lg:text-[clamp(2rem,3.2vw+3vh,5rem)]">
               Let&apos;s make
               <br />
               something
@@ -55,7 +55,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="flex items-center justify-between gap-4 border-t border-zinc-900 pt-4">
+          <div className="flex flex-col gap-4 border-t border-zinc-900 pt-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
                 WhatsApp priority desk
@@ -69,7 +69,7 @@ export default function ContactPage() {
               href="https://wa.me/10000000000"
               target="_blank"
               rel="noreferrer"
-              className="border border-zinc-700 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-white transition hover:border-white"
+              className="self-start border border-zinc-700 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-white transition hover:border-white sm:self-auto"
             >
               Start chat →
             </a>

@@ -19,7 +19,7 @@ export function PageShell({
         scroll ? "min-h-screen" : "min-h-screen lg:h-screen"
       }`}
     >
-      <div className="shrink-0">
+      <div className="sticky top-0 z-40 shrink-0">
         <SiteHeader current={current} />
       </div>
       <div

@@ -10,18 +10,19 @@ export type Project = {
   accent: string;
   tag: string;
   duration: string;
-  credit: string;
+  credit?: string;
+  youtubeId?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Project One",
-    category: "REEL / SOCIAL",
-    format: "9:16",
+    title: "Sweden VLOG",
+    category: "VLOG",
+    format: "16:9",
     accent: "from-zinc-800 via-zinc-950 to-black",
-    tag: "LIVE REEL",
-    duration: "00:42 // 4K",
-    credit: "SOUND DESIGN + EDIT",
+    tag: "VLOG",
+    duration: "20:18",
+    youtubeId: "zYrmIaEv5iI",
     collection: "Long Format",
   },
   {

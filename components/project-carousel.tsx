@@ -47,6 +47,10 @@ function ProjectCard({
 }: ProjectCardProps) {
   const isReel = layout === "reel";
 
+  const thumbnailUrl = project.youtubeId
+    ? `https://i.ytimg.com/vi/${project.youtubeId}/maxresdefault.jpg`
+    : null;
+
   return (
     <motion.div
       drag={isPreview ? false : "x"}
@@ -57,6 +61,12 @@ function ProjectCard({
       aria-hidden={isPreview}
       className={`absolute inset-y-0 overflow-hidden bg-gradient-to-br ${project.accent} ${className}`}
     >
+      {thumbnailUrl && (
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${thumbnailUrl})` }}
+        />
+      )}
       <div
         className={`absolute flex items-center ${
           isReel ? "left-2 top-2 gap-1.5" : "left-4 top-4 gap-2"
@@ -88,7 +98,19 @@ function ProjectCard({
               isReel ? "size-9 text-xs" : "size-14 text-base"
             }`}
           >
-            ▶
+            {!isPreview && project.youtubeId && (
+              <a
+                href={`https://www.youtube.com/watch?v=${project.youtubeId}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Watch ${project.title} on YouTube`}
+                className={`grid place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur-sm transition hover:border-[var(--fita-accent)] hover:bg-[var(--fita-accent)] hover:text-black ${
+                  isReel ? "size-9 text-xs" : "size-14 text-base"
+                }`}
+              >
+                ▶
+              </a>
+            )}
           </div>
         </div>
       )}
@@ -240,7 +262,6 @@ export function ProjectCarousel({
       </div>
 
       <div className="fita-accent-ambient relative isolate my-3 min-h-[clamp(280px,55svh,420px)] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
-        {" "}
         {hasPreviews && (
           <ProjectCard
             project={previousProject}

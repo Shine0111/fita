@@ -31,7 +31,7 @@ export function FormatTabs({
             onClick={() => onChange(collection)}
             className={`shrink-0 border-b-2 pb-3 font-mono text-[10px] uppercase tracking-[0.16em] transition ${
               isActive
-                ? "border-white text-white"
+                ? "fita-accent-active border-[var(--fita-accent)] text-[var(--fita-accent)]"
                 : "border-transparent text-zinc-600 hover:text-zinc-300"
             }`}
           >

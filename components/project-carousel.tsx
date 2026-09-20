@@ -223,7 +223,7 @@ export function ProjectCarousel({
             type="button"
             onClick={previous}
             aria-label="Previous project"
-            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-white hover:text-white"
+            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-[var(--fita-accent)] hover:text-[var(--fita-accent)]"
           >
             ←
           </button>
@@ -232,14 +232,14 @@ export function ProjectCarousel({
             type="button"
             onClick={next}
             aria-label="Next project"
-            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-white hover:text-white"
+            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-[var(--fita-accent)] hover:text-[var(--fita-accent)]"
           >
             →
           </button>
         </div>
       </div>
 
-      <div className="relative isolate my-3 min-h-[clamp(280px,55svh,420px)] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
+      <div className="fita-accent-ambient relative isolate my-3 min-h-[clamp(280px,55svh,420px)] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
         {" "}
         {hasPreviews && (
           <ProjectCard

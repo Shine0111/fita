@@ -9,7 +9,7 @@ Initial Next.js implementation of the Stitch 2×2 editorial portfolio direction.
 - Tailwind CSS
 - Motion
 - GitHub for source control
-- Hosting intentionally left open for now
+- GitHub Pages deployment
 
 ## Run locally
 
@@ -19,6 +19,13 @@ npm run dev
 ```
 
 Then open http://localhost:3000.
+
+## Deploy to GitHub Pages
+
+Push to `main` (or run the **Deploy to GitHub Pages** workflow manually). GitHub
+Actions builds the static export and publishes it to:
+
+https://shine0111.github.io/fita/
 
 ## First things to replace
 

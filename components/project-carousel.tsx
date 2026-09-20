@@ -205,19 +205,17 @@ export function ProjectCarousel({
         </div>
       </div>
 
-      <div
-        className={`relative isolate my-4 min-h-[170px] overflow-hidden border border-zinc-800 bg-zinc-950 lg:my-3 lg:min-h-[180px] ${
-          layout === "reel"
-            ? "aspect-[9/10] w-full max-w-full self-center lg:h-full lg:w-auto lg:max-w-full"
-            : "flex-1"
-        }`}
-      >
+      <div className="relative isolate my-3 min-h-[160px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
         {" "}
         {hasPreviews && (
           <ProjectCard
             project={previousProject}
             isPreview
-            className="left-[-60%] z-0 h-full w-[78%] scale-[0.92] opacity-35"
+            className={`z-0 h-full scale-[0.92] opacity-35 ${
+              layout === "reel"
+                ? "left-[34%] aspect-[9/16] w-auto"
+                : "left-[-60%] w-[78%]"
+            }`}
           />
         )}
         <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -241,7 +239,11 @@ export function ProjectCarousel({
                 duration: 0.25,
               },
             }}
-            className="absolute inset-y-0 left-[11%] z-10 h-full w-[78%] touch-pan-y"
+            className={`absolute inset-y-0 z-10 h-full touch-pan-y ${
+              layout === "reel"
+                ? "left-1/2 w-auto -translate-x-1/2 aspect-[9/16]"
+                : "left-[11%] w-[78%]"
+            }`}
           >
             <ProjectCard
               project={project}
@@ -254,7 +256,11 @@ export function ProjectCarousel({
           <ProjectCard
             project={nextProject}
             isPreview
-            className="right-[-60%] z-0 h-full w-[78%] scale-[0.92] opacity-35"
+            className={`z-0 h-full scale-[0.92] opacity-35 ${
+              layout === "reel"
+                ? "right-[34%] aspect-[9/16] w-auto"
+                : "right-[-60%] w-[78%]"
+            }`}
           />
         )}
       </div>

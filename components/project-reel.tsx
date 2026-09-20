@@ -44,20 +44,8 @@ export function ProjectReel({ projects }: ProjectReelProps) {
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col justify-between">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-            04 // Selected cuts
-          </span>
-        </div>
-
-        <span className="font-mono text-[10px] text-zinc-400">
-          {String(activeProjects.length).padStart(2, "0")} projects
-        </span>
-      </div>
-
-      <div className="my-5">
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div className="mb-4">
         <FormatTabs
           collections={availableCollections}
           activeCollection={activeCollection}

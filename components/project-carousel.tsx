@@ -119,48 +119,25 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
               </div>
             </div>
 
-            <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4">
-              <div>
+            <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+              <div className="min-w-0">
                 <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400">
                   {project.category}
                 </p>
-                <h3 className="mt-1 font-[family-name:var(--font-syne)] text-xl font-bold uppercase tracking-tight text-white">
+                <h3 className="mt-1 truncate font-[family-name:var(--font-syne)] text-xl font-bold uppercase tracking-tight text-white">
                   {project.title}
                 </h3>
               </div>
               <span className="hidden font-mono text-[10px] text-zinc-400 sm:block">
                 {project.format}
               </span>
-              {/* credit line, next to the format tag in the bottom overlay row */}
-              <span className="hidden font-mono text-[10px] text-zinc-400 sm:block">
+
+              <span className="hidden font-mono text-[10px] text-zinc-400 lg:block">
                 {project.credit} ↗
               </span>
             </div>
           </motion.div>
         </AnimatePresence>
-      </div>
-
-      <div className="flex items-center justify-between border-t border-zinc-900 pt-3">
-        <div className="no-scrollbar flex gap-4 overflow-x-auto">
-          {projects.map((item, itemIndex) => (
-            <button
-              key={item.title}
-              onClick={() => setIndex(itemIndex)}
-              className={`shrink-0 border-b pb-1 font-mono text-[10px] uppercase tracking-[0.12em] transition ${
-                itemIndex === index
-                  ? "border-white text-white"
-                  : "border-transparent text-zinc-600 hover:text-zinc-300"
-              }`}
-            >
-              {String(itemIndex + 1).padStart(2, "0")} {item.title}
-            </button>
-          ))}
-        </div>
-
-        <span className="hidden shrink-0 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500 sm:flex">
-          <span className="size-1.5 rounded-full bg-red-500" />
-          Watch 2024 showreel
-        </span>
       </div>
     </div>
   );

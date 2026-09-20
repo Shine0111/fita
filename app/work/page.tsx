@@ -1,4 +1,3 @@
-import { ProjectCarousel } from "../../components/project-carousel";
 import { PageShell } from "../../components/page-shell";
 import { projects } from "../../lib/projects";
 import { SiteFooter } from "../../components/site-footer";
@@ -35,7 +34,7 @@ export default function WorkPage() {
           </div>
 
           <div className="flex min-h-0 flex-1 py-8">
-            <ProjectCarousel projects={projects} />
+            <ProjectReel projects={projects} />
           </div>
         </div>
       </section>

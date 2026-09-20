@@ -5,9 +5,9 @@ import { SiteFooter } from "../../components/site-footer";
 
 export default function WorkPage() {
   return (
-    <PageShell current="work">
-      <section className="min-h-[calc(100vh-3.5rem)] p-6 lg:p-10">
-        <div className="flex min-h-[calc(100vh-8rem)] flex-col">
+    <PageShell current="work" footer={<SiteFooter />}>
+      <section className="flex min-h-0 flex-1 flex-col p-6 lg:overflow-y-auto lg:p-10">
+        <div className="flex min-h-0 flex-1 flex-col">
           <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[#1e1e21] pb-4">
             <div>
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
@@ -33,12 +33,11 @@ export default function WorkPage() {
             </div>
           </div>
 
-          <div className="flex flex-1 py-8">
+          <div className="flex min-h-0 flex-1 py-8">
             <ProjectCarousel />
           </div>
         </div>
       </section>
-      <SiteFooter />
     </PageShell>
   );
 }

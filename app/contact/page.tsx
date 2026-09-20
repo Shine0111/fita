@@ -3,9 +3,9 @@ import { SiteFooter } from "../../components/site-footer";
 
 export default function ContactPage() {
   return (
-    <PageShell current="contact">
-      <section className="grid min-h-[calc(100vh-3.5rem-3.5rem)] lg:grid-cols-2">
-        <div className="flex flex-col justify-between border-b border-[#1e1e21] p-6 lg:border-b-0 lg:border-r lg:p-10">
+    <PageShell current="contact" footer={<SiteFooter />}>
+      <section className="grid flex-1 min-h-0 lg:grid-cols-2">
+        <div className="flex flex-col justify-between border-b border-[#1e1e21] p-6 lg:min-h-0 lg:overflow-y-auto lg:border-b-0 lg:border-r lg:px-8 lg:py-5">
           <div className="flex items-center justify-between">
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
               01 // Contact
@@ -18,8 +18,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="py-16">
-            <h1 className="headline-tight max-w-3xl font-[family-name:var(--font-syne)] text-[clamp(3.5rem,7vw,7rem)] font-extrabold uppercase">
+          <div className="py-16 lg:py-4">
+            <h1 className="headline-tight max-w-3xl font-[family-name:var(--font-syne)] text-[clamp(3.5rem,7vw,7rem)] font-extrabold uppercase lg:text-[clamp(2rem,3.2vw+3vh,5rem)]">
               Let&apos;s make
               <br />
               something
@@ -35,21 +35,21 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between bg-[#0c0c0e] p-6 lg:p-10">
+        <div className="flex flex-col justify-between bg-[#0c0c0e] p-6 lg:min-h-0 lg:overflow-y-auto lg:px-8 lg:py-5">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
               02 // Primary contact
             </span>
           </div>
 
-          <div className="py-16">
+          <div className="py-16 lg:py-4">
             <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
               Send an email to
             </p>
 
             <a
               href="mailto:hello@fita.studio"
-              className="block break-all font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white underline decoration-1 underline-offset-8 transition hover:text-zinc-400 sm:text-4xl"
+              className="block break-all font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white underline decoration-1 underline-offset-8 transition hover:text-zinc-400 sm:text-4xl lg:text-[clamp(1.5rem,2.4vw+2vh,2.75rem)]"
             >
               hello@fita.studio
             </a>
@@ -76,7 +76,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <SiteFooter />
     </PageShell>
   );
 }

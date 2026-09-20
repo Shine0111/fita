@@ -3,17 +3,19 @@ import { SiteHeader, type SiteHeaderCurrent } from "./site-header";
 type PageShellProps = {
   current: SiteHeaderCurrent;
   scroll?: boolean;
+  footer?: React.ReactNode;
   children: React.ReactNode;
 };
 
 export function PageShell({
   current,
   scroll = false,
+  footer,
   children,
 }: PageShellProps) {
   return (
     <main
-      className={`flex flex-col bg-[#0a0a0a] font-(family-name:--font-jakarta) text-zinc-100 ${
+      className={`flex flex-col bg-[#0a0a0a] font-[family-name:var(--font-jakarta)] text-zinc-100 ${
         scroll ? "min-h-screen" : "min-h-screen lg:h-screen"
       }`}
     >
@@ -27,6 +29,7 @@ export function PageShell({
       >
         {children}
       </div>
+      {footer && <div className="shrink-0">{footer}</div>}
     </main>
   );
 }

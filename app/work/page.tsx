@@ -18,7 +18,7 @@ export default function WorkPage() {
               </h1>
             </div>
 
-            <div className="flex items-center gap-6 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+            <div className="fita-muted flex items-center gap-6 font-mono text-[10px] uppercase tracking-[0.14em]">
               <div className="flex flex-col items-end">
                 <span className="text-lg font-bold text-white">
                   {projects.length}

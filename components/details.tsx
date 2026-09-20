@@ -19,7 +19,7 @@ export function Details() {
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
           03 // Scope &amp; disciplines
         </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
           Capabilities
         </span>
       </div>
@@ -68,13 +68,13 @@ export function Details() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-3">
-        <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-zinc-500">
+        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.1em]">
           Suite: Premiere Pro / DaVinci Resolve / After Effects
         </span>
 
         <a
           href="mailto:hello@fita.studio"
-          className="font-mono text-[10px] uppercase tracking-[0.1em] text-white underline decoration-[var(--fita-accent)] underline-offset-4 transition hover:text-[var(--fita-accent)]"
+          className="fita-muted font-mono text-[10px] uppercase tracking-[0.1em] text-white underline decoration-[var(--fita-accent)] underline-offset-4 transition hover:text-[var(--fita-accent)]"
         >
           Initiate collaboration →
         </a>

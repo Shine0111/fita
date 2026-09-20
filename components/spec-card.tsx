@@ -13,7 +13,7 @@ export function SpecCard({ label, title, subtitle }: SpecCardProps) {
       <p className="mt-1 font-[family-name:var(--font-syne)] text-sm font-bold uppercase text-white">
         {title}
       </p>
-      <p className="mt-0.5 font-mono text-[10px] text-zinc-500">{subtitle}</p>
+      <p className="fita-muted mt-0.5 font-mono text-[10px]">{subtitle}</p>
     </div>
   );
 }

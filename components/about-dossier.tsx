@@ -23,7 +23,7 @@ export function AboutDossier() {
       {/* Left: portrait + identity */}
       <div className="flex flex-col overflow-hidden border border-zinc-800 bg-zinc-950 lg:col-span-5">
         <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-2">
-          <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+          <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">
             Canvas 01 // Film Lead
           </span>
           <span className="font-mono text-[10px] text-zinc-300">
@@ -43,7 +43,7 @@ export function AboutDossier() {
           </div>
         </div>
 
-        <div className="space-y-2 border-t border-zinc-900 p-4 font-mono text-[10px] uppercase tracking-[0.1em] text-zinc-500">
+        <div className="fita-muted space-y-2 border-t border-zinc-900 p-4 font-mono text-[10px] uppercase tracking-[0.1em]">
           <p>FITA // b. 1996 // Berlin &amp; Global</p>
           <div className="flex flex-wrap gap-4">
             <span>
@@ -63,7 +63,7 @@ export function AboutDossier() {
           </p>
           <h1 className="mt-2 max-w-xl font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white lg:text-4xl">
             Pacing is an{" "}
-            <span className="text-zinc-500">emotional architecture.</span>
+            <span className="fita-title-accent">emotional architecture.</span>
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-400">
             A montage is not merely chronological footage stitching — it is a
@@ -106,7 +106,7 @@ export function AboutDossier() {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-4">
-          <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500">
+          <p className="fita-muted font-mono text-[10px] uppercase tracking-[0.12em]">
             Q3/Q4 commissions open // response within 24 hours
           </p>
           <a

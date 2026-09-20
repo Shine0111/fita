@@ -12,7 +12,7 @@ export default function ContactPage() {
             </span>
             <div className="flex items-center gap-2">
               <span className="size-1.5 shrink-0 animate-pulse rounded-full bg-red-500" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+              <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
                 Available for commissions
               </span>
             </div>
@@ -23,11 +23,11 @@ export default function ContactPage() {
               <br />
               something
               <br />
-              <span className="text-zinc-500">move.</span>
+              <span className="fita-title-accent">move.</span>
             </h1>
           </div>
           <div className="border-t border-zinc-900 pt-3">
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500">
+            <p className="fita-muted font-mono text-[10px] uppercase tracking-[0.12em]">
               Video / Film / Creative
             </p>
           </div>
@@ -40,7 +40,7 @@ export default function ContactPage() {
             </span>
           </div>
           <div className="py-16 lg:py-4">
-            <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+            <p className="fita-muted mb-3 font-mono text-[10px] uppercase tracking-[0.18em]">
               Send an email to
             </p>
 
@@ -53,7 +53,7 @@ export default function ContactPage() {
           </div>
           <div className="flex flex-col gap-4 border-t border-zinc-900 pt-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+              <p className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">
                 WhatsApp priority desk
               </p>
               <p className="font-[family-name:var(--font-syne)] text-lg font-bold text-white">

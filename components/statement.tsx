@@ -5,14 +5,14 @@ export function Statement() {
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
           02 // Manifesto
         </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
           Rhythm & emotion
         </span>
       </div>
 
       <div className="my-auto py-8 lg:py-4">
         <h2 className="headline-tight max-w-2xl font-[family-name:var(--font-syne)] text-[clamp(2rem,3.6vw,4.5rem)] font-extrabold uppercase text-zinc-100 lg:text-[clamp(1.75rem,2.2vw+1.6vh,3.75rem)]">
-          I edit <span className="text-zinc-500">stories</span> that move.
+          I edit <span className="fita-title-accent">stories</span> that move.
         </h2>
         <div className="mt-7 flex max-w-xl items-start gap-3 lg:mt-4">
           <span className="mt-2 h-px w-8 shrink-0 bg-zinc-600" />
@@ -23,7 +23,7 @@ export function Statement() {
         </div>
       </div>
 
-      <div className="border-t border-zinc-900 pt-3 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-500">
+      <div className="fita-muted border-t border-zinc-900 pt-3 font-mono text-[10px] uppercase tracking-[0.12em]">
         Editing / Sound / Motion / Story
       </div>
 

@@ -5,13 +5,13 @@ export function Profile() {
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
           01 // Identity
         </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
           Berlin &amp; Global
         </span>
       </div>
 
       <div className="my-auto flex flex-col items-center gap-6 py-8 sm:flex-row sm:items-end lg:gap-4 lg:py-4">
-        <div className="relative size-36 shrink-0 overflow-hidden border border-zinc-800 bg-zinc-900 sm:size-44 lg:size-[clamp(5.5rem,12vh,7.5rem)]">
+        <div className="relative size-36 shrink-0 overflow-hidden border border-zinc-800 bg-zinc-900 sm:size-44 lg:size-[clamp(10rem,14vh,9rem)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,#777_0,#272727_28%,#111_62%,#090909_100%)] grayscale transition duration-700 group-hover:grayscale-0" />
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-2 left-2 flex items-center gap-1.5">

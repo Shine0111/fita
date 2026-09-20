@@ -37,7 +37,7 @@ export function ProjectReel({ projects }: ProjectReelProps) {
 
   if (!activeCollection || availableCollections.length === 0) {
     return (
-      <div className="flex min-h-0 flex-1 items-center justify-center border border-zinc-800 text-sm text-zinc-500">
+      <div className="fita-muted flex min-h-0 flex-1 items-center justify-center border border-zinc-800 text-sm">
         No projects available.
       </div>
     );

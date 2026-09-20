@@ -7,7 +7,7 @@ const SOCIALS = [
 
 export function SiteFooter() {
   return (
-    <footer className="flex flex-col items-center justify-between gap-3 border-t border-[#1e1e21] px-6 py-4 font-mono text-[10px] uppercase tracking-[0.1em] text-zinc-500 sm:flex-row lg:px-10">
+    <footer className="fita-muted flex flex-col items-center justify-between gap-3 border-t border-[#1e1e21] px-6 py-4 font-mono text-[10px] uppercase tracking-[0.1em] sm:flex-row lg:px-10">
       <div className="flex items-center gap-3">
         <span className="text-zinc-300">2024 Ed.</span>
         <span className="text-zinc-700">/</span>

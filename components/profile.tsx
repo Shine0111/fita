@@ -44,9 +44,6 @@ export function Profile() {
             YouTube ↗
           </a>
           <a href="#" className="transition hover:text-[var(--fita-accent)]">
-            Vimeo ↗
-          </a>
-          <a href="#" className="transition hover:text-[var(--fita-accent)]">
             LinkedIn ↗
           </a>
         </div>

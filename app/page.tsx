@@ -11,12 +11,12 @@ export default function Home() {
     <PageShell current="home">
       <div
         id="top"
-        className="grid min-h-0 flex-1 lg:grid-cols-2 lg:grid-rows-2"
+        className="grid min-h-0 flex-1 lg:grid-cols-[2fr_3fr] lg:grid-rows-[2fr_3fr]"
       >
-        <div className="lg:min-h-0 lg:overflow-y-auto lg:border-r lg:border-b lg:border-[#1e1e21]">
+        <div className="min-h-0 min-w-0 lg:border-r lg:border-b lg:border-[#1e1e21]">
           <Profile />
         </div>
-        <div className="lg:min-h-0 lg:overflow-y-auto border-t border-[#1e1e21] lg:border-t-0 lg:border-b">
+        <div className="min-h-0 min-w-0 border-t border-[#1e1e21] lg:border-t-0 lg:border-b">
           <Statement />
         </div>
         <div

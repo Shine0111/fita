@@ -2,7 +2,7 @@ const formatFocus = [
   "Music Videos & Festival Recaps",
   "YouTube High-Production Epics",
   "Reels & Viral Brand Motion",
-  "Commercials & Brand Documentaries",
+  "Commercials & Documentaries",
 ];
 
 const technicalServices = [
@@ -26,10 +26,8 @@ export function Details() {
 
       <div className="my-auto max-w-2xl py-8 lg:py-4">
         <p className="max-w-xl text-sm leading-relaxed text-zinc-300 lg:text-[13px]">
-          FITA operates at the intersection of cinematic post-production and
-          digital culture. Blending narrative pacing with aggressive,
-          contemporary sound architecture to build memorable commercial films,
-          music videos, and viral social content.
+          I'm operating at the intersection of cinematic post-production and
+          digital culture.
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:mt-4 lg:gap-y-3">
@@ -69,7 +67,7 @@ export function Details() {
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-3">
         <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.1em]">
-          Suite: Premiere Pro / DaVinci Resolve / After Effects
+          Premiere Pro / DaVinci Resolve / After Effects
         </span>
 
         <a

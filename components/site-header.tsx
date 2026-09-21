@@ -21,7 +21,7 @@ export function SiteHeader({ current }: { current: SiteHeaderCurrent }) {
         <span className="hidden items-center gap-2 border-l border-zinc-800 pl-3 sm:flex">
           <span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />
           <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">
-            Available for select projects
+            Available
           </span>
         </span>
       </div>

@@ -230,10 +230,6 @@ export function ProjectCarousel({
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-            04 // Selected cuts
-          </span>
-
           <span className="font-mono text-[10px] text-zinc-400">
             {String(index + 1).padStart(2, "0")} /{" "}
             {String(projects.length).padStart(2, "0")}

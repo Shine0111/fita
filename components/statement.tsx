@@ -1,15 +1,6 @@
 export function Statement() {
   return (
     <section className="relative flex min-h-[50svh] flex-col justify-between overflow-hidden bg-[#0c0c0e] p-6 lg:min-h-0 lg:px-8 lg:py-5">
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-          02 // Manifesto
-        </span>
-        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
-          Rhythm & emotion
-        </span>
-      </div>
-
       <div className="my-auto py-8 lg:py-4">
         <h2 className="headline-tight max-w-2xl font-[family-name:var(--font-syne)] text-[clamp(2rem,3.6vw,4.5rem)] font-extrabold uppercase text-zinc-100 lg:text-[clamp(1.75rem,2.2vw+1.6vh,3.75rem)]">
           I edit <span className="fita-title-accent">stories</span> that move.

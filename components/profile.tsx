@@ -1,12 +1,11 @@
+import { links } from "../lib/links";
+
 export function Profile() {
   return (
     <section className="group relative flex min-h-[50svh] flex-col justify-between overflow-hidden bg-[#0a0a0a] p-6 lg:min-h-0 lg:px-8 lg:py-5">
       <div className="flex items-center justify-between">
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-          01 // Identity
-        </span>
-        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
-          Berlin &amp; Global
+          Me
         </span>
       </div>
 
@@ -37,19 +36,25 @@ export function Profile() {
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-3">
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400">
-          <a href="#" className="transition hover:text-[var(--fita-accent)]">
-            Instagram ↗
+          <a
+            href={links.instagram.url}
+            className="transition hover:text-[var(--fita-accent)]"
+          >
+            {links.instagram.label} ↗
           </a>
-          <a href="#" className="transition hover:text-[var(--fita-accent)]">
-            YouTube ↗
+          <a
+            href={links.youtube.url}
+            className="transition hover:text-[var(--fita-accent)]"
+          >
+            {links.youtube.label} ↗
           </a>
-          <a href="#" className="transition hover:text-[var(--fita-accent)]">
-            LinkedIn ↗
+          <a
+            href={links.linkedin.url}
+            className="transition hover:text-[var(--fita-accent)]"
+          >
+            {links.linkedin.label} ↗
           </a>
         </div>
-        <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-600">
-          2024 Ed.
-        </span>
       </div>
     </section>
   );

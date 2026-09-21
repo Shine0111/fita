@@ -1,8 +1,9 @@
-const formatFocus = [
-  "Music Videos & Festival Recaps",
-  "YouTube High-Production Epics",
-  "Reels & Viral Brand Motion",
-  "Commercials & Documentaries",
+const coreCompetencies = [
+  "Video editing & storytelling",
+  "Color grading & sound design",
+  "Short-form content production",
+  "Camera operation",
+  "Lighting setup for interviews & scenes",
 ];
 
 const technicalServices = [
@@ -26,38 +27,22 @@ export function Details() {
       </div>
       <div className="my-auto max-w-2xl py-8 lg:py-4">
         <p className="max-w-xl text-sm leading-relaxed text-zinc-300 lg:text-[13px]">
-          I'm operating at the intersection of cinematic post-production and
-          digital culture.
+          I aim to deliver content that feels polished, intentional, and aligned
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:mt-4 lg:gap-y-3">
           <div>
             <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-600">
-              Format Focus
+              Core Competencies
             </p>
             <ul className="space-y-2 lg:space-y-1">
-              {formatFocus.map((item) => (
+              {coreCompetencies.map((item) => (
                 <li
                   key={item}
                   className="flex items-start gap-2 font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-400"
                 >
                   <span className="mt-1 size-1.5 shrink-0 bg-zinc-700" />
                   {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-600">
-              Technical Services
-            </p>
-            <ul className="space-y-2 lg:space-y-1">
-              {technicalServices.map((item) => (
-                <li
-                  key={item}
-                  className="font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-400"
-                >
-                  · {item}
                 </li>
               ))}
             </ul>
@@ -70,7 +55,7 @@ export function Details() {
         </span>
 
         <a
-          href="mailto:hello@fita.studio"
+          href="mailto:fitahiantsoarazaf@gmail.com"
           className="self-start shrink-0 border border-[var(--fita-accent)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--fita-accent)] transition hover:bg-[var(--fita-accent)] hover:text-black"
         >
           Initiate collaboration →

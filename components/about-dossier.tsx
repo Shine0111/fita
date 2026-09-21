@@ -24,7 +24,7 @@ export function AboutDossier() {
       <div className="flex flex-col overflow-hidden border border-zinc-800 bg-zinc-950 lg:col-span-5 min-w-0">
         <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-2">
           <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">
-            Canvas 01 // Film Lead
+            Canvas 01
           </span>
           <span className="font-mono text-[10px] text-zinc-300">
             Arri Raw / 800 ASA
@@ -38,19 +38,15 @@ export function AboutDossier() {
               FITA
             </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-400">
-              Filmmaker / Lead Post-Director
+              Video Editor
             </span>
           </div>
         </div>
 
         <div className="fita-muted space-y-2 border-t border-zinc-900 p-4 font-mono text-[10px] uppercase tracking-[0.1em]">
-          <p>FITA // b. 1996 // Berlin &amp; Global</p>
+          <p>FITA // b. 2003</p>
           <div className="flex flex-wrap gap-4">
-            <span>
-              Vimeo Staff Pick <span className="text-zinc-700">×3</span>
-            </span>
-            <span>Berlin Comm. Finalist &apos;23</span>
-            <span>Cannes Lions Shortlist</span>
+            <span>Awards are coming soon</span>
           </div>
         </div>
       </div>
@@ -58,18 +54,18 @@ export function AboutDossier() {
       {/* Right: philosophy, spec grid, clients, CTA */}
       <div className="flex flex-col gap-8 lg:col-span-7">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-            01 Core Philosophy
-          </p>
           <h1 className="mt-2 max-w-xl font-[family-name:var(--font-syne)] text-[clamp(1.75rem,6vw,2.25rem)] font-extrabold uppercase leading-tight text-white wrap-break-word">
             Pacing is an{" "}
             <span className="fita-title-accent">emotional architecture.</span>
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-400">
-            A montage is not merely chronological footage stitching — it is a
-            physical pressure system. Synchronizing acoustic dynamics with
-            sudden frame shifts and lingering stillness to dictate the
-            biological pulse of the story.
+            I am a video editor focused on producing clean, modern, and visually
+            engaging content for brands, creators, and small businesses.
+            <br />
+            My work ranges from short-form social content to podcasts and
+            cinematic sequences, always with an emphasis on clarity, rhythm, and
+            strong visual identity.I handle both editing and filming, using
+            tools like DaVinci Resolve, Premiere Pro, and CapCut.
           </p>
         </div>
 
@@ -85,7 +81,7 @@ export function AboutDossier() {
 
         <div>
           <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-            02 The Edit Suite
+            My Edit Suite
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {specs.map((spec) => (
@@ -96,7 +92,7 @@ export function AboutDossier() {
 
         <div>
           <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-            03 Selected Clients &amp; Directors
+            Selected Clients
           </p>
           <div className="flex flex-wrap gap-2">
             {clients.map((client) => (
@@ -107,10 +103,10 @@ export function AboutDossier() {
 
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-4">
           <p className="fita-muted font-mono text-[10px] uppercase tracking-[0.12em]">
-            Q3/Q4 commissions open // response within 24 hours
+            I try to reply within 24 hours
           </p>
           <a
-            href="mailto:hello@fita.studio"
+            href="mailto:fitahiantsoarazaf@gmail.com"
             className="border border-[var(--fita-accent)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--fita-accent)] transition hover:bg-[var(--fita-accent)] hover:text-black"
           >
             Start project

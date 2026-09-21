@@ -50,19 +50,19 @@ export default function ContactPage() {
 
             <a
               href="mailto:hello@fita.studio"
-              className="block min-w-0 break-all font-[family-name:var(--font-syne)] text-2xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] hover:decoration-[var(--fita-text)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-3xl lg:text-[clamp(1.25rem,2vw+1vh,3rem)]"
+              className="block min-w-0 break-all font-[family-name:var(--font-syne)] text-2xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] hover:decoration-[var(--fita-text)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-3xl lg:text-[clamp(1.25rem,1.5vw+1vh,3rem)]"
             >
-              hello@fita.studio
+              fitahiantsoarazaf@gmail.com
             </a>
           </div>
 
           <div className="flex min-w-0 flex-col gap-4 border-t border-zinc-900 pt-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
               <p className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">
-                WhatsApp priority desk
+                WhatsApp
               </p>
               <p className="font-[family-name:var(--font-syne)] text-lg font-bold text-white">
-                +1 (000) 000-0000
+                +261 34 43 841 71
               </p>
             </div>
 

@@ -20,7 +20,7 @@ export default function ContactPage() {
           </div>
 
           <div className="min-w-0 py-12 lg:py-4">
-            <h1 className="headline-tight min-w-0 max-w-3xl break-words font-[family-name:var(--font-syne)] text-[clamp(2.75rem,12vw,7rem)] font-extrabold uppercase">
+            <h1 className="headline-tight min-w-0 max-w-3xl break-words font-[family-name:var(--font-syne)] text-[clamp(2.25rem,8vw,4rem)] font-extrabold uppercase">
               Let&apos;s make
               <br />
               something
@@ -50,7 +50,7 @@ export default function ContactPage() {
 
             <a
               href="mailto:hello@fita.studio"
-              className="block min-w-0 break-all font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-4xl lg:text-[clamp(1.5rem,2.4vw+2vh,2.75rem)]"
+              className="block min-w-0 break-all font-[family-name:var(--font-syne)] text-2xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-3xl lg:text-[clamp(1.25rem,2vw+1vh,3rem)]"
             >
               hello@fita.studio
             </a>

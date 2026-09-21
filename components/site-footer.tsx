@@ -10,12 +10,12 @@ const SOCIALS = [
 export function SiteFooter() {
   return (
     <footer className="fita-muted flex flex-col items-center justify-between gap-3 border-t border-[#1e1e21] px-6 py-4 font-mono text-[10px] uppercase tracking-[0.1em] sm:flex-row lg:px-10">
-      <div className="flex items-center gap-3">
-        <span className="text-zinc-300">2026 Ed.</span>
-        <span className="text-zinc-700">|</span>
+      <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em]">
+        <span className="text-zinc-600">Designed &amp; Developed by</span>
+
         <Link
           href="https://github.com/Shine0111"
-          className="transition hover:text-[var(--fita-accent)]"
+          className="text-zinc-300 transition hover:text-[var(--fita-accent)]"
         >
           Shine Ran.
         </Link>

@@ -254,14 +254,15 @@ export function ProjectCarousel({
             type="button"
             onClick={next}
             aria-label="Next project"
-            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-[var(--fita-accent)] hover:text-[var(--fita-accent)]"
+            className="grid size-8 place-items-center rounded-full border border-zinc-800 text-zinc-400 transition hover:border-[var(--fita-accent)]"
           >
             →
           </button>
         </div>
       </div>
 
-      <div className="fita-accent-ambient relative isolate my-3 min-h-[clamp(280px,55svh,420px)] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-[clamp(160px,18vh,220px)]">
+      <div className="fita-accent-ambient relative isolate my-3 min-h-[280px] flex-1 overflow-hidden border border-zinc-800 bg-zinc-950 lg:min-h-0">
+        {" "}
         {hasPreviews && (
           <ProjectCard
             project={previousProject}

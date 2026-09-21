@@ -61,7 +61,7 @@ export function AboutDossier() {
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
             01 Core Philosophy
           </p>
-          <h1 className="mt-2 max-w-xl font-[family-name:var(--font-syne)] text-3xl font-extrabold uppercase leading-tight text-white lg:text-4xl">
+          <h1 className="mt-2 max-w-xl font-[family-name:var(--font-syne)] text-[clamp(1.75rem,6vw,2.25rem)] font-extrabold uppercase leading-tight text-white">
             Pacing is an{" "}
             <span className="fita-title-accent">emotional architecture.</span>
           </h1>

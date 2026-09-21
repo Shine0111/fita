@@ -11,7 +11,7 @@ export default function Home() {
     <PageShell current="home">
       <div
         id="top"
-        className="grid flex-1 min-h-0 lg:grid-cols-2 lg:grid-rows-2"
+        className="grid min-h-0 flex-1 lg:grid-cols-2 lg:grid-rows-2"
       >
         <div className="lg:min-h-0 lg:overflow-y-auto lg:border-r lg:border-b lg:border-[#1e1e21]">
           <Profile />
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <section
           id="work"
-          className="min-h-[50svh] min-w-0 overflow-hidden border-t border-[#1e1e21] bg-[#0a0a0a] p-6 lg:min-h-0 lg:px-8 lg:py-5"
+          className="flex min-h-0 min-w-0 flex-col overflow-hidden border-t border-[#1e1e21] bg-[#0a0a0a] p-6 lg:px-8 lg:py-5"
         >
           <ProjectReel projects={projects} />
         </section>

@@ -21,7 +21,7 @@ export function AboutDossier() {
   return (
     <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-12 lg:p-10">
       {/* Left: portrait + identity */}
-      <div className="flex flex-col overflow-hidden border border-zinc-800 bg-zinc-950 lg:col-span-5">
+      <div className="flex flex-col overflow-hidden border border-zinc-800 bg-zinc-950 lg:col-span-5 min-w-0">
         <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-2">
           <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.14em]">
             Canvas 01 // Film Lead
@@ -31,7 +31,7 @@ export function AboutDossier() {
           </span>
         </div>
 
-        <div className="relative aspect-[4/5] w-full overflow-hidden bg-zinc-900">
+        <div className="relative aspect-[4/4] w-full overflow-hidden bg-zinc-900">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,#777_0,#272727_28%,#111_62%,#090909_100%)] grayscale" />
           <div className="absolute inset-x-4 bottom-4">
             <span className="block font-[family-name:var(--font-syne)] text-xl font-bold uppercase text-white">
@@ -61,7 +61,7 @@ export function AboutDossier() {
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
             01 Core Philosophy
           </p>
-          <h1 className="mt-2 max-w-xl font-[family-name:var(--font-syne)] text-[clamp(1.75rem,6vw,2.25rem)] font-extrabold uppercase leading-tight text-white">
+          <h1 className="mt-2 max-w-xl font-[family-name:var(--font-syne)] text-[clamp(1.75rem,6vw,2.25rem)] font-extrabold uppercase leading-tight text-white wrap-break-word">
             Pacing is an{" "}
             <span className="fita-title-accent">emotional architecture.</span>
           </h1>

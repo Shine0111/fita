@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div
           id="about"
-          className="flex min-h-0 min-w-0 flex-col border-t border-[#1e1e21] lg:justify-end lg:border-r"
+          className="min-h-0 min-w-0 border-t border-[#1e1e21] lg:border-r"
         >
           <Details />
         </div>

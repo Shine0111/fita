@@ -50,7 +50,7 @@ export default function ContactPage() {
 
             <a
               href="mailto:hello@fita.studio"
-              className="block min-w-0 break-all font-[family-name:var(--font-syne)] text-2xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-3xl lg:text-[clamp(1.25rem,2vw+1vh,3rem)]"
+              className="block min-w-0 break-all font-[family-name:var(--font-syne)] text-2xl font-extrabold uppercase leading-tight text-white underline decoration-[var(--fita-accent)] hover:decoration-[var(--fita-text)] decoration-1 underline-offset-8 transition hover:text-[var(--fita-accent)] sm:text-3xl lg:text-[clamp(1.25rem,2vw+1vh,3rem)]"
             >
               hello@fita.studio
             </a>

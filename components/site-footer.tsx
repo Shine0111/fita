@@ -15,6 +15,8 @@ export function SiteFooter() {
 
         <Link
           href="https://github.com/Shine0111"
+          target="_blank"
+          rel="noreferrer"
           className="text-zinc-300 transition hover:text-[var(--fita-accent)]"
         >
           Shine Ran.

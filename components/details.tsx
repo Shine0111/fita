@@ -16,15 +16,6 @@ const technicalServices = [
 export function Details() {
   return (
     <section className="flex h-full min-h-[50svh] flex-col justify-between overflow-hidden bg-[#0c0c0e] p-6 lg:min-h-0 lg:px-8 lg:py-5">
-      {" "}
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
-          03 // Scope &amp; disciplines
-        </span>
-        <span className="fita-muted font-mono text-[10px] uppercase tracking-[0.18em]">
-          Capabilities
-        </span>
-      </div>
       <div className="my-auto max-w-2xl py-8 lg:py-4">
         <p className="max-w-xl text-sm leading-relaxed text-zinc-300 lg:text-[13px]">
           I aim to deliver content that feels polished, intentional, and aligned

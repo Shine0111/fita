@@ -1,6 +1,5 @@
 const SOCIALS = [
   { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://vimeo.com", label: "Vimeo" },
   { href: "https://youtube.com", label: "YouTube" },
   { href: "https://linkedin.com", label: "LinkedIn" },
 ];

@@ -18,13 +18,14 @@ export function Details() {
     <section className="flex h-full min-h-[50svh] flex-col justify-between overflow-hidden bg-[#0c0c0e] p-6 lg:min-h-0 lg:px-8 lg:py-5">
       <div className="my-auto max-w-2xl py-8 lg:py-4">
         <p className="max-w-xl text-sm leading-relaxed text-zinc-300 lg:text-[13px]">
-          I aim to deliver content that feels polished, intentional, and aligned
+          I aim to deliver content that feels polished, intentional, and
+          aligned.
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:mt-4 lg:gap-y-3">
           <div>
             <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-600">
-              Core Competencies
+              My Core Competencies
             </p>
             <ul className="space-y-2 lg:space-y-1">
               {coreCompetencies.map((item) => (

@@ -72,7 +72,7 @@ export function Details() {
 
         <a
           href="mailto:hello@fita.studio"
-          className="fita-muted font-mono text-[10px] uppercase tracking-[0.1em] text-white underline decoration-[var(--fita-accent)] underline-offset-4 transition hover:text-[var(--fita-accent)]"
+          className="self-start shrink-0 border border-[var(--fita-accent)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--fita-accent)] transition hover:bg-[var(--fita-accent)] hover:text-black"
         >
           Initiate collaboration →
         </a>

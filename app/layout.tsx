@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Syne } from "next/font/google";
 import "./globals.css";
+import { FitaCursor } from "../components/fita-cursor";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -25,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jakarta.variable} ${syne.variable}`}>
-      <body>{children}</body>
+      <body>
+        <FitaCursor />
+        {children}
+      </body>
     </html>
   );
 }

@@ -10,7 +10,7 @@ const SOCIALS = [
 export function SiteFooter() {
   return (
     <footer className="fita-muted flex flex-col items-center justify-between gap-3 border-t border-[#1e1e21] px-6 py-4 font-mono text-[10px] uppercase tracking-[0.1em] sm:flex-row lg:px-10">
-      <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em]">
+      <div className="order-2 sm:order-1 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.12em]">
         <span className="text-zinc-600">Designed &amp; Developed by</span>
 
         <Link
@@ -22,7 +22,7 @@ export function SiteFooter() {
           Shine Ran.
         </Link>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="order-1 sm:order-2 flex items-center gap-3">
         {Object.entries(links).map(([key, social], i) => (
           <span key={key} className="flex items-center gap-3">
             {i > 0 && <span className="text-zinc-700">/</span>}

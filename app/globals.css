@@ -72,3 +72,83 @@ body {
     border-color: #1e1e21;
   }
 }
+
+/* FITA editor cursor ---------------------------------------------------- */
+.fita-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-100px, -100px, 0);
+  transition: opacity 160ms ease;
+  will-change: transform;
+}
+
+.fita-cursor.is-visible {
+  opacity: 1;
+}
+
+.fita-cursor-ring {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(236, 236, 236, 0.7);
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.72);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 0 8px 28px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(7px);
+  transition: width 180ms ease, height 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.fita-cursor-icon {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  color: #f2f2f2;
+}
+
+.fita-cursor-label {
+  min-width: 0;
+  padding: 5px 7px;
+  border: 1px solid rgba(236, 236, 236, 0.14);
+  background: rgba(10, 10, 10, 0.84);
+  color: #a7a7ad;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  backdrop-filter: blur(7px);
+}
+
+.fita-cursor.is-compact .fita-cursor-label {
+  display: none;
+}
+
+.fita-cursor.is-pressed .fita-cursor-ring {
+  transform: scale(0.78);
+  border-color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  body.fita-custom-cursor,
+  body.fita-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fita-cursor-ring {
+    transition: none;
+  }
+}
